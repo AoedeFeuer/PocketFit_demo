@@ -126,13 +126,6 @@ const DOCTOR_APPTS = [
   { id:"a6", clientId:"c6", date: fmtDate(addDays(new Date(),1)), time:"14:30", type:"Pain review" },
 ];
 
-
-  { id:"a1", clientId:"c1", date: todayStr(), time:"10:00", type:"Follow-up" },
-  { id:"a2", clientId:"c2", date: todayStr(), time:"11:30", type:"Mobility session" },
-  { id:"a3", clientId:"c3", date: fmtDate(addDays(new Date(),1)), time:"09:00", type:"Initial assessment" },
-  { id:"a4", clientId:"c4", date: fmtDate(addDays(new Date(),3)), time:"15:00", type:"Re-evaluation" },
-];
-
 const INITIAL_DOCTOR_UNAVAIL = [
   { id:"u1", date: todayStr(), start:"08:00", end:"09:00", label:"Admin time" },
   { id:"u2", date: fmtDate(addDays(new Date(),2)), start:"12:00", end:"13:00", label:"Lunch" },

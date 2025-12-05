@@ -1,12 +1,12 @@
 {
-  "name": "pocketfit-vite-tamagotchi-calendar-sim",
+  "name": "pocketfit-physio-revamp9",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node node_modules/vite/bin/vite.js --host 127.0.0.1 --port 5173",
-    "build": "node node_modules/vite/bin/vite.js build",
-    "preview": "node node_modules/vite/bin/vite.js preview --port 5050"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 5050"
   },
   "dependencies": {
     "react": "^18.2.0",

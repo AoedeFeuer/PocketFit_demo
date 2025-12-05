@@ -1,1 +1,104 @@
-body{margin:0;background:#FAFAF9;color:#1F2937;font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+:root{
+  --bg:#FFFBF7; --surface:#FFFFFF; --text:#1F2937; --muted:#6B7280; --border:#F3E8E2;
+  --accent:#F97316; --accentSoft:#FED7AA;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.app{max-width:420px;margin:0 auto;min-height:100vh;display:flex;flex-direction:column;background:var(--bg)}
+header{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--border);z-index:10}
+.hwrap{display:flex;align-items:center;justify-content:space-between;padding:12px 16px}
+.title{font-weight:800}
+.iconbtn{width:36px;height:36px;border-radius:12px;border:1px solid var(--border);display:grid;place-items:center;background:var(--surface)}
+main{flex:1;padding:16px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:0 6px 20px rgba(2,6,23,.06)}
+.btn{height:44px;border-radius:12px;border:1px solid transparent;background:var(--accent);color:#fff;font-weight:700;display:inline-grid;place-items:center;padding:0 16px;cursor:pointer}
+.btn.secondary{background:#fff;color:var(--text);border-color:var(--border)}
+.btn.ghost{background:transparent;border-color:var(--border);color:var(--text)}
+.btn.warn{background:#fff;color:#9a3412;border-color:#fb923c}
+.btn:disabled{opacity:.6}
+.badge{font-size:11px;padding:2px 8px;border-radius:999px;border:1px solid var(--border);background:#fff;color:var(--muted)}
+.badge.attn{border-color:#fb923c;color:#9a3412;background:#FFF1E6}
+.field{display:grid;gap:6px}
+.label{font-size:12px;color:var(--muted)}
+.input, select, .textarea{height:44px;border-radius:12px;border:1px solid var(--border);padding:0 12px;background:#fff;color:var(--text)}
+.textarea{height:88px;padding:10px 12px}
+.row{display:flex;gap:12px}
+.stack{display:grid;gap:12px}
+.center{display:grid;place-items:center}
+.logo{width:96px;height:96px;border-radius:28px;background:linear-gradient(135deg,var(--accentSoft),var(--accent));display:grid;place-items:center;color:#fff;font-weight:800;font-size:28px;box-shadow:0 10px 30px rgba(249,115,22,.25)}
+.pet{width:120px;height:120px;border-radius:999px;background:#FFF7ED;display:grid;place-items:center;font-size:56px;border:1px solid var(--border);cursor:pointer}
+.stat{display:grid;gap:6px}
+.bar{height:12px;border-radius:999px;background:#FFEAD5;overflow:hidden}
+.bar>span{display:block;height:100%;background:var(--accent)}
+.tabs{position:sticky;bottom:0;background:rgba(255,255,255,.98);backdrop-filter:saturate(180%) blur(8px);border-top:1px solid var(--border)}
+.tabbar{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:8px}
+.tab{height:44px;border-radius:12px;border:1px solid var(--border);background:#fff;display:grid;place-items:center;font-size:12px;color:var(--muted)}
+.tab.active{background:var(--accent);color:#fff;border-color:transparent;font-weight:700}
+.hint{font-size:12px;color:var(--muted)}
+.list{display:grid;gap:8px}
+.item{padding:10px 12px;border-radius:12px;border:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;background:#fff}
+.grid7{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.day{height:42px;border-radius:10px;border:1px solid var(--border);display:grid;place-items:center;background:#fff;font-size:12px;position:relative}
+
+/* --- Patient Home redesign additions --- */
+.kangrow{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:center}
+.petBox{width:84px;height:84px;border-radius:24px;background:#FFF7ED;border:1px solid var(--border);display:grid;place-items:center;overflow:hidden}
+.petBox img{width:72px;height:72px;object-fit:contain}
+.progBlock{display:grid;gap:8px}
+.pill{height:10px;border-radius:999px;background:#E5E7EB;overflow:hidden}
+.pill>span{display:block;height:100%;background:var(--accent)}
+.kmeta{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{padding:4px 10px;border-radius:999px;background:#FFF1E6;color:#9a3412;border:1px solid #FBD9B2;font-size:12px}
+.sectionTitle{font-size:16px;font-weight:800;margin:4px 0}
+.mapWrap{background:#fff;border:1px solid var(--border);border-radius:16px;padding:12px}
+.mapRail{height:4px;background:#E5E7EB;border-radius:999px;position:relative;margin:20px 0}
+.mapNodes{display:flex;justify-content:space-between;position:relative;top:-12px}
+.node{width:22px;height:22px;border-radius:999px;background:#D1D5DB;border:2px solid #F3F4F6}
+.node.done{background:var(--accent);border-color:var(--accent)}
+.node.current{background:#fff;border-color:var(--accent);box-shadow:0 0 0 4px #FDEAD7}
+.mapLabels{display:flex;justify-content:space-between;color:var(--muted);font-size:12px}
+.link{color:var(--accent);text-decoration:none;font-weight:700}
+/* Illustration container with fixed aspect and clipping */
+.exercise-illustration{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;           /* consistent height across devices */
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;               /* prevents image from spilling */
+  background: #fff;
+}
+
+/* Make the image fit without cropping */
+.exercise-illustration > img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;            /* show whole picture */
+  display: block;
+}
+
+/* Overlay for the reps pill */
+.exercise-illustration .reps{
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+}
+
+.brandMark{
+  width: 72px;
+  height: 72px;
+  display: block;
+  object-fit: contain;   /* scales large images into the icon box */
+  border-radius: 16px;   /* optional: match your rounded icon style */
+}
+
+.dot{
+  width: 8px; height: 8px; border-radius: 999px; display: inline-block;
+  border: 1px solid var(--border);
+}
+.dot.plan { background: #FFF1E6; border-color: #FBD9B2; } /* soft mark for plan days */
+.dot.appt { background: var(--accent); border-color: var(--accent); } /* existing appt color */
+.legend { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); }

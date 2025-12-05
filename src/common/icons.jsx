@@ -1,0 +1,10 @@
+import React from "react";
+export const Icon = {
+  profile:(p)=>(<svg width="22" height="22" viewBox="0 0 24 24" fill="none" {...p}><circle cx="12" cy="8" r="4.5" stroke="currentColor" strokeWidth="1.6"/><path d="M4 21c1.8-3.7 5-5.5 8-5.5s6.2 1.8 8 5.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/></svg>),
+  home:(p)=>(<svg width="22" height="22" viewBox="0 0 24 24" fill="none" {...p}><path d="M3 11.5 12 4l9 7.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/><path d="M6 11v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-8" stroke="currentColor" strokeWidth="1.6"/></svg>),
+  cal:(p)=>(<svg width="22" height="22" viewBox="0 0 24 24" fill="none" {...p}><rect x="3" y="5" width="18" height="16" rx="4" stroke="currentColor" strokeWidth="1.6"/><path d="M7 3v4M17 3v4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/><path d="M3 9h18" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/></svg>),
+  book:(p)=>(<svg width="22" height="22" viewBox="0 0 24 24" fill="none" {...p}><path d="M6 4h9a3 3 0 0 1 3 3v13H8a2 2 0 0 1-2-2V4Z" stroke="currentColor" strokeWidth="1.6"/><path d="M8 7h8" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/></svg>),
+  chat:(p)=>(<svg width="22" height="22" viewBox="0 0 24 24" fill="none" {...p}><path d="M4 6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3H9l-5 5V6Z" stroke="currentColor" strokeWidth="1.6"/></svg>),
+  users:(p)=>(<svg width="22" height="22" viewBox="0 0 24 24" fill="none" {...p}><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2" stroke="currentColor" strokeWidth="1.6"/><circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="1.6"/><path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" strokeWidth="1.6"/><path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" strokeWidth="1.6"/></svg>),
+  plan:(p)=>(<svg width="22" height="22" viewBox="0 0 24 24" fill="none" {...p}><path d="M6 4h9l3 3v13H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" stroke="currentColor" strokeWidth="1.6"/><path d="M9 11h6M9 15h4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/></svg>),
+};

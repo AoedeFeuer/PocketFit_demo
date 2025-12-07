@@ -5,7 +5,7 @@ import { THERAPISTS } from "../../shared/data";
 export default function PatientBookList({ onSelect }){
   return (
     <>
-      <Header title="Find a therapist" />
+      <Header title="Find a physiotherapist" />
       <main>
         <div className="card" style={{padding:16}}>
           <div className="hint" style={{marginBottom:8}}>Mock list of nearby physiotherapists.</div>

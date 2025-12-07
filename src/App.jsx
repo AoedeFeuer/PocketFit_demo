@@ -86,7 +86,7 @@ function PatientRegister({ onSubmit }) {
 }
 
 function DoctorLogin({ onSubmit,onBack }){
-  const [name,setName]=useState("");
+  const [name,setName]=useState("John Smith");
   function submit(e){e.preventDefault();const n=name.trim();if(!n)return;onSubmit({name:n,rating:4.8,pfBookings:128,specialty:"Sports rehabilitation",location:"Paris 11e"});}
   return (
     <div style={{padding:16}}>
